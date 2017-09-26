@@ -1,5 +1,5 @@
 class PoemsController < ApplicationController
-  before_action :set_poem, only: [:show, :edit, :destroy]
+  before_action :set_poem, only: [:show, :edit, :update, :destroy]
 
   # GET /poems
   # GET /poems.json
@@ -20,7 +20,7 @@ class PoemsController < ApplicationController
 
   # GET /poems/1/edit
   def edit
-    @poem = Poem.find(params[:id])
+    # @poem = Poem.find(params[:id])
   end
 
   # POST /poems
@@ -42,7 +42,7 @@ class PoemsController < ApplicationController
   # PATCH/PUT /poems/1
   # PATCH/PUT /poems/1.json
   def update
-    @poem = Poem.find(params[:id])
+    # @poem = Poem.find(params[:id])
     respond_to do |format|
       if @poem.update(poem_params)
         format.html { redirect_to @poem, notice: 'Poem was successfully updated.' }
